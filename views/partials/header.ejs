@@ -1,6 +1,12 @@
 <head>
     <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
     type="text/css">
+    <style>
+      h3{
+        color: white;
+        font-family: cursive;
+      }
+    </style>
    
 
         
@@ -12,7 +18,7 @@
 
             <div class="header item">Blogsite</div>
         
-        <a href="/blogs/home" class="item">
+        <a href="/home" class="item">
           Home
         </a>
         <a href="/blogs" class="item">
@@ -21,6 +27,21 @@
         <a href="/blogs/new" class="item">
           New blog
         </a>
+        <div class="right menu">
+          <%if(!currentuser){%>
+
+          <a href="/login" class="item">
+          Login</a>
+          <a href="/register" class="item">
+            Signup
+          </a>
+       <% } else{%>
+
+       <li><a href="#" >Welcome <%=currentuser.username %></a></li>li>
+        <a href="/logout" class="item">
+          Logout</a>
+       <% }%>
+        </div>
         
               
             </div>
