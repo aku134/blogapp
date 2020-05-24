@@ -4,6 +4,22 @@
   
 </head>
 <body>
+    <div class="ui fixed inverted menu">
+        <div class="ui container">
+
+            <div class="header item">Blogsite</div>
+    <div class="right menu">
+        <a href="/login" class="item">
+        Login</a>
+        <a href="/register" class="item">
+          Signup
+        </a>
+      
+      <a href="/logout" class="item">
+        Logout</a>
+      </div>
+        </div>
+    </div><br><br><br>
     
    
 
@@ -12,15 +28,14 @@
         Login
     </div>
     <form class="ui form " action="/login" method="POST">
-        <div class="field">
+        
             <label>Username</label>
-        <input type="text" name="username" placeholder="username"><br><br>
-        </div>
-        <div class="field">
+        <input type="text" name="username" placeholder="username" required ><br><br>
+        
             <label>Password</label>
-            <input type="text" name="password" placeholder="username"><br><br>
-     
-        </div>
+            <input type="text" name="password" placeholder="username" required><br><br>
+    
+        
         <input class="ui violet big basic button" type="submit" value="Login">
         </div>
 
