@@ -1,0 +1,20 @@
+<body>
+<%- include ('partials/header') %>
+
+
+<%data.reverse().forEach(function(b){ %>
+    <div>
+        <h4><%=b.title%></h4>
+        <img class="ui  rounded image medium" src="<%=b.image %>" >
+        <span><%=b.created.toDateString()%></span>
+        <p><%=b.body%></p>
+        <a href="/blogs/<%=b._id%>">Read more</a><br>
+        <a class="ui red basic button small" href="/blogs/<%=b._id%>/edit">Edit</a>
+        <a class="ui red basic button small" href="/blogs/<%=b._id%>">Delete</a>
+        
+    </div>
+    
+<%})%>
+<%- include ('partials/footer') %>
+</body>
+

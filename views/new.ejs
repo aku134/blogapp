@@ -1,0 +1,44 @@
+
+<html>
+<head>
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    type="text/css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    
+    <%- include ('partials/header') %>
+
+<div class="ui main text container">
+    <div class="ui huge header">
+        New Post
+    </div>
+    <form class="ui form " action="/blogs" method="POST">
+        <div class="field">
+            <label>Title</label>
+        <input type="text" name="Blog[title]" placeholder="title"><br><br>
+        </div>
+        <div class="field">
+        <label>
+         Image
+        </label>
+      
+        <input type="text" name="Blog[image]" placeholder="image"><br><br>
+        </div>
+        <div class="field">
+            <label>
+                Content
+            </label>
+        <textarea name="Blog[body]" placeholder="content"></textarea><br><br>
+        </div>
+        <input class="ui violet big basic button" type="submit">
+        </div>
+
+    </form>
+    
+</div>
+<%- include ('partials/footer') %>
+
+
+</body>
+</html>
