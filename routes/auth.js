@@ -4,6 +4,24 @@ var passport=require("passport");
 var User=require("../models/user");
 
 
+
+////////////////////////////////Register/////////////////////////////////////////
+router.get("/register",function(req,res){
+    res.render("signup");
+});
+router.post("/register",function(req,res){
+    var newuser=new User({username:req.body.username});
+    User.register(newuser,req.body.password,function(err,user){
+        if(err){
+            console.log(err);
+            return res.render("signup");
+        }
+        passport.authenticate("local")(req,res,function(){
+
+        });
+    });
+});
+
 /////////////////////////////////////////Login///////////////////////////////////////////////////////////
 
 router.get("/login",function(req,res){
