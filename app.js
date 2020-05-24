@@ -58,6 +58,6 @@ app.use(blogRoutes);
 app.use(authRoutes);
 
 
-app.listen(process.env.PORT||2000,function(){
+app.listen(process.env.PORT||"2000",function(){
     console.log("running")
 });
